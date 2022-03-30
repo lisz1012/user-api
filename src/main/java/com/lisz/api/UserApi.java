@@ -18,7 +18,7 @@ public interface UserApi {
 	String getById(@PathVariable int id);
 
 	@GetMapping("/map")
-	public Map<Integer, String> map(@RequestParam int id); // 这里必须写@RequestParam， user-provider中的那个实现类可以不写，但最好都写上
+	public Map<Integer, String> map(@RequestParam int id); // 这里必须写@RequestParam，是给Openfeign看的 user-provider中的那个实现类可以不写，但最好都写上
 
 	@GetMapping("/map2")
 	public Map<Integer, String> map2(@RequestParam int id, @RequestParam String name);
